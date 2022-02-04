@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Седона</title>
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
         <h1 class="visually-hidden">Страница каталога</h1>
@@ -39,15 +40,13 @@
                         </a>
                     </li>
                     <li class="navigation-item">
-                        <a class="search-button navigation-link" href="#">
-                            Хочу сюда
-                        </a>
+                        <a class="search-button navigation-link" href="#">Хочу сюда!</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main class="main-inner">
-            <section>
+            <section class="hotel-choosing">
                 <header class="inner-header">
                     <h2 class="inner-header-title">Гостиницы Седоны</h2>
                     <ul class="breadcrumbs">
@@ -99,25 +98,25 @@
                             <input type="range" min="0" max="9000" step="10" name="price">
                     </fieldset>
                     <fieldset>
-                        <button class="button-submit" type="submit">Применить</button>
+                        <button class="button button-submit" type="submit">Применить</button>
                         <button class="button-reset" type="reset">Сбросить</button>
                     </fieldset>
                 </form>
             </section>
-            <section>
+            <section class="option">
                 <h3>Найдено гостиниц: <span class="count"></span></h3>
                 <select class="select-control">
                     <option value="popular">С высоким рейтингом</option>
                     <option value="cheap" selected>Сначала дешёвые</option>
                     <option value="expensive">Сначала дорогие</option>
                 </select>
-                <a class="button" href="#">
+                <a class="button-view" href="#">
                     <span class="visually-hidden">Показать плиткой</span>
                 </a>
-                <a class="button" href="#">
+                <a class="button-view" href="#">
                     <span class="visually-hidden">Показать слайдом</span>
                 </a>
-                <a href="#" class="button">
+                <a href="#" class="button-view">
                     <span class="visually-hidden">Показать списком</span>
                 </a>
             </section>
@@ -129,14 +128,14 @@
                     </a>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Тип жилья</span>
+                            <span class="hotel-type">Гостиница</span>
                         </li>
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Стоимость от</span>
+                            <span class="hotel-price">От 4000</span>
                         </li>
                     </ul>
-                    <a class="hotel-card-button button" href="#">Подробнее</a>
-                    <button class="hotel-card-button">В избранное</button>
+                    <a class="hotel-card-link button" href="#">Подробнее</a>
+                    <button class="hotel-card-button button">В избранное</button>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
                             <span class="visually-hidden">Количество звезд</span>
@@ -153,14 +152,14 @@
                     </a>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Тип жилья</span>
+                            <span class="hotel-type">Гостиница</span>
                         </li>
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Стоимость от</span>
+                            <span class="hotel-price">От 3000</span>
                         </li>
                     </ul>
-                    <a class="hotel-card-button button" href="#">Подробнее</a>
-                    <button class="hotel-card-button">В избранное</button>
+                    <a class="hotel-card-link button" href="#">Подробнее</a>
+                    <button class="hotel-card-button button">В избранное</button>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
                             <span class="visually-hidden">Количество звезд</span>
@@ -177,14 +176,14 @@
                     </a>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Тип жилья</span>
+                            <span class="hotel-type">Гостиница</span>
                         </li>
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Стоимость от</span>
+                            <span class="hotel-price">От 2000</span>
                         </li>
                     </ul>
-                    <a class="hotel-card-button button" href="#">Подробнее</a>
-                    <button class="hotel-card-button">В избранное</button>
+                    <a class="hotel-card-link button" href="#">Подробнее</a>
+                    <button class="hotel-card-button button-green button ">В избранное</button>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
                             <span class="visually-hidden">Количество звезд</span>
@@ -201,14 +200,14 @@
                     </a>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Тип жилья</span>
+                            <span class="hotel-type">Гостиница</span>
                         </li>
                         <li class="hotel-breadcrumbs-item">
-                            <span class="visually-hidden">Стоимость от</span>
+                            <span class="hotel-price">От 3000</span>
                         </li>
                     </ul>
-                    <a class="hotel-card-button button" href="#">Подробнее</a>
-                    <button class="hotel-card-button">В избранное</button>
+                    <a class="hotel-card-link button" href="#">Подробнее</a>
+                    <button class="hotel-card-button button">В избранное</button>
                     <ul class="hotel-breadcrumbs">
                         <li class="hotel-breadcrumbs-item">
                             <span class="visually-hidden">Количество звезд</span>
@@ -219,7 +218,7 @@
                     </ul>
                 </li>
             </ul>
-            <button class="download">Загрузить еще</button>
+            <button class="button download">Загрузить еще</button>
             <ul class="pagination">
                 <li class="pagination-item">
                     <a class="pagination-link pagination-current">1</a>
@@ -250,12 +249,12 @@
                     <option value="6">6</option>
                 </select>
             </label>
-            <section class="distribution">
+            <section class="distribution-inner">
                 <h3>Подпишитесь на рассылку</h3>
                 <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-                <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
+                <form class="distribution-inner-form" action="https://echo.htmlacademy.ru/" method="post">
                     <input type="email" name="email" placeholder="Ваш e-mail">
-                    <button class="distribution-button" type="submit">Подписаться</button>
+                    <button class="distribution-inner-button button" type="submit">Подписаться</button>
                 </form>
             </section>
         </main>
