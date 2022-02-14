@@ -15,25 +15,25 @@
                 </a>
                 <ul class="navigation-list">
                     <li class="navigation-item">
-                        <a class="navigation-link" href="index.html">Главная</a>
+                        <a class="navigation-link navigation-inner" href="index.html">Главная</a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="#">О Седоне</a>
+                        <a class="navigation-link navigation-inner" href="#">О Седоне</a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="catalog.html">Гостиницы</a>
+                        <a class="navigation-link navigation-inner" href="catalog.html">Гостиницы</a>
                     </li>
                 </ul>
                 <ul class="navigation-list navigation-user">
                     <li class="navigation-item">
-                        <a class="navigation-link" href="#">
+                        <a class="navigation-link navigation-inner" href="#">
                             <span class="visually-hidden">
                             Поиск
                             </span>
                         </a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="#">
+                        <a class="navigation-link navigation-inner" href="#">
                             <span class="visually-hidden">
                             Лайки
                             </span>
@@ -108,6 +108,7 @@
                 </section>
                 <section class="option">
                     <h3>Найдено гостиниц: <span class="count"></span></h3>
+                    <div class="form-selection">
                     <select class="select-control">
                         <option value="popular">С высоким рейтингом</option>
                         <option value="cheap" selected>Сначала дешёвые</option>
@@ -122,6 +123,7 @@
                     <a href="#" class="button-view">
                         <span class="visually-hidden">Показать списком</span>
                     </a>
+                    </div>
                 </section>
                 <ul class="hotels-list">
                     <li class="hotel-card">
@@ -222,36 +224,38 @@
                     </li>
                 </ul>
                 <button class="button download">Загрузить еще</button>
-                <ul class="pagination">
-                    <li class="pagination-item">
-                        <a class="pagination-link pagination-current">1</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a class="pagination-link" href="#">2</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a class="pagination-link" href="#">3</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a class="pagination-link" href="#">4</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a class="pagination-link" href="#">...</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a class="pagination-link" href="#">10</a>
-                    </li>
-                </ul>
-                <label class="">Гостиниц на странице:
-                    <select class="pagination-show-more">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4" selected>4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                </label>
+                <div class="pagination-container">
+                    <ul class="pagination">
+                        <li class="pagination-item">
+                            <a class="pagination-link pagination-current">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-link" href="#"><span>2</span></a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-link" href="#">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-link" href="#">4</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-link" href="#">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-link" href="#">10</a>
+                        </li>
+                    </ul>
+                    <label class="pagination-show">Гостиниц на странице:
+                        <select class="pagination-show-more">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4" selected>4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </label>
+                </div>
                 <section class="distribution-inner">
                     <h3>Подпишитесь на рассылку</h3>
                     <p>Только полезная информация и никакого спама, честное бойскаутское!</p>

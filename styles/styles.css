@@ -29,9 +29,16 @@ body {
     background-color: #FFFFFF;
     color: #000000;
 }
-/*Не забудь отключить*/
+
 .visually-hidden {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .page-header {
@@ -50,12 +57,16 @@ body {
 .navigation-logo {
     width: 139px;
     margin-right: 47px;
+    margin-bottom: -10px;
 }
 
 .navigation-list {
+    display: flex;
+    flex-wrap: wrap;
     width: 460px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .navigation-user {
@@ -64,6 +75,8 @@ body {
 }
 
 .navigation-link {
+    display: block;
+    padding: 20px 17px;
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
@@ -71,6 +84,11 @@ body {
     color: #000000;
     background-color: #E5E5E5;
     text-decoration: none;
+}
+
+.navigation-user .navigation-link {
+    min-width: 18px;
+    min-height: 18px;
 }
 
 .search-button {
@@ -86,6 +104,8 @@ body {
 .navigation-item .search-button {
     font-size: 16px;
     line-height: 20px;
+    padding: 9px 15px;
+    margin-top: 13px;
     border-radius: 4px;
 }
 
@@ -99,8 +119,6 @@ body {
     align-items: center;
     width: 1200px;
     margin: 0 auto;
-    /*Установлен временно*/
-    outline: solid darkorchid;
 }
 
 .main-background {
@@ -126,6 +144,8 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 63px;
+    margin-bottom: 31px;
 }
 
 .reasons {
@@ -133,9 +153,10 @@ body {
     line-height: 36px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 80px;
 }
 
-/*Думаю, преимущества "на гридах" будут выглядеть примерно так*/
+/* Преимущества "на гридах". Редактир.в след.д/з*/
 .advantages-list {
     display: grid;
     grid-template-columns: 400px 400px 400px;
@@ -226,6 +247,8 @@ body {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 91px;
+    margin-bottom: 29px;
 }
 
 .search p {
@@ -233,17 +256,18 @@ body {
     line-height: 26px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 56px;
 }
 
 .search .search-button {
+    display: block;
     font-size: 20px;
     line-height: 36px;
     text-align: center;
     border-radius: 10px;
     width: 575px;
     padding: 15px 0;
-    margin-left: 312px;
-    margin-right: 313px;
+    margin: 0 313px 93px 312px;
 }
 
 .distribution {
@@ -261,6 +285,8 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-top: 94px;
+    margin-bottom: 0;
 }
 
 .distribution p {
@@ -269,7 +295,8 @@ body {
     font-weight: 400;
     text-align: center;
     color: #FFFFFF;
-
+    margin-top: 29px;
+    margin-bottom: 46px;
 }
 
 .distribution-form {
@@ -283,7 +310,7 @@ body {
     font-weight: 700;
     text-align: center;
     width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 200px auto;
     color: #FFFFFF;
     background-color: #83B3D3;
     border: #83B3D3;
@@ -301,9 +328,19 @@ body {
     margin: 0 auto;
 }
 
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 120px;
+    margin: 49px auto 53px auto;
+}
+
 .footer-social-item a {
-    width: 107px;
-    margin-right: 61px;
+    display: block;
+    min-width: 10px;
+    min-height: 16px;
+    margin-right: 29px;
     color: #83B3D3;
     background-color: #FFFFFF;
     text-decoration: none;
@@ -317,7 +354,7 @@ body {
     text-decoration: none;
     color: #000000;
     width: 720px;
-    margin-right: 53px;
+    margin: 40px auto 53px auto;
 }
 
 .htmlacademy-link {
@@ -325,11 +362,17 @@ body {
     color: #000000;
     background-color: #FFFFFF;
     text-decoration: none;
+    margin-top: 42px;
 }
 
 /* Catalog*/
 
 .page-header-inner {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+.navigation-inner {
     background-color: #FFFFFF;
 }
 
@@ -346,10 +389,20 @@ body {
     line-height: 78px;
     font-weight: 700;
     text-align: left;
+    margin: 53px auto 5px 71px;
     color: #FFFFFF;
 }
 
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .breadcrumbs-link {
+    margin-right: 10px;
+    margin-left: 73px;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -360,6 +413,10 @@ body {
 
 .option {
     display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    padding: 0;
+    margin: 0;
     color: #000000;
     background-color: #FFFFFF;
 }
@@ -368,15 +425,26 @@ body {
      line-height: 39px;
      font-weight: 700;
      text-transform: uppercase;
+     margin: 50px auto 53px 71px;
+ }
+ .form-selection {
+     display: flex;
+     padding: 0;
+     margin: 44px auto 53px 0;
+ }
+
+ .button-view {
+     width: 48px;
+     height: 48px;
  }
 
  .hotels-list {
-     padding-left: 0;
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
      width: 1056px;
-     margin: 0 auto;
+     padding-left: 0;
+     margin: 0 auto 34px auto;
      /*Установлен временно*/
      outline: solid red;
  }
@@ -384,8 +452,12 @@ body {
 .hotel-card {
     width: 300px;
     padding: 20px;
+    margin-right: 18px;
     list-style-type: none;
+}
 
+.hotel-card:nth-child(3n) {
+    margin-right: 0;
 }
 
  .hotel-card-link {
@@ -403,11 +475,39 @@ body {
     color: #333333;
 }
 
+.download {
+    width: 620px;
+    margin: 30px auto 30px auto;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-around;
+    width: 1056px;
+    padding: 30px 0 73px 0;
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
 .pagination-link {
+    display: block;
+    box-sizing: border-box;
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
+    padding: 14px 16px;
     text-align: center;
+    width: 55px;
+    height: 55px;
     color: #FFFFFF;
     background-color: #83B3D3;
     text-decoration: none;
@@ -415,7 +515,14 @@ body {
 
 .pagination-current {
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #F2F2F2;;
+}
+
+.pagination-show {
+    font-size: 18px;
+    line-height: 23px;
+    padding-top: 16px;
+    margin-left: auto;
 }
 
 .distribution-inner h3 {
@@ -424,6 +531,8 @@ body {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 46px;
     color: #000000;
     background-color: #FFFFFF;
 }
@@ -433,6 +542,8 @@ body {
     line-height: 26px;
     font-weight: 400;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 46px;
     color: #000000;
     background-color: #FFFFFF;
 }
@@ -491,6 +602,7 @@ body {
 }
 
 .distribution-inner-button {
+    margin: 0 auto 141px auto;
     background-color: #83B3D3;
     border: #83B3D3;
     border-radius: 0 10px 10px 0;
