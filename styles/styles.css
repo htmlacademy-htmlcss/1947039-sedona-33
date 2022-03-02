@@ -70,11 +70,6 @@ body {
     list-style-type: none;
 }
 
-.navigation-user {
-    width: 330px;
-    margin-left: auto;
-}
-
 .navigation-link {
     display: block;
     padding: 20px 17px;
@@ -87,24 +82,93 @@ body {
     text-decoration: none;
 }
 
-.navigation-user .navigation-link {
+.active {
+    border-bottom: 2px solid #756257;
+}
+
+.navigation-link:hover {
+    color: #756257;
+}
+
+.navigation-link:active span {
+    opacity: 0.3;
+}
+
+.navigation-user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    width: 330px;
+    margin: 0 24px 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation-user-link {
+    display: block;
+    position: relative;
+    margin: 24px 24px 24px auto;
     min-width: 18px;
     min-height: 18px;
 }
 
+.navigation-user:last-child {
+    margin-right: 0;
+}
+
+.navigation-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.navigation-user-link:hover .navigation-icon {
+    fill: #756257;
+}
+
+.navigation-icon:active {
+    opacity: 0.3;
+}
+
 .search-button {
-    font-family: inherit;
+    display: block;
+    box-sizing: border-box;
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
     background-color: #756257;
     color: #FFFFFF;
     text-decoration: none;
-    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #615048;
+}
+
+.search-button:focus:not(:active) {
+    outline: 3px solid #83B3D3;;
+    background: #615048;
+}
+
+.search-button:active {
+    background: #615048;
+    outline: none;
+}
+
+.search-button:active span {
+    opacity: 0.3;
 }
 
 .navigation-item .search-button {
     font-size: 16px;
     line-height: 20px;
+    width: 160px;
+    height: 37px;
     padding: 9px 15px;
     margin-top: 13px;
     border-radius: 4px;
@@ -126,6 +190,7 @@ body {
     height: 485px;
     background: url("../images/main-page/divider.svg") bottom no-repeat,
                 url("../images/main-page/index-background.jpg") center no-repeat;
+    margin-bottom: 63px;
 }
 
 .main-background img {
@@ -140,12 +205,12 @@ body {
 }
 
 .title {
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 63px;
     margin-bottom: 31px;
 }
 
@@ -164,13 +229,10 @@ body {
     padding: 0;
     margin: 0 auto;
     width: 1200px;
+    list-style-type: none;
 }
 
 .advantages-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     max-height: 384px;
     margin: 0;
     padding: 0;
@@ -178,10 +240,11 @@ body {
     list-style-type: none;
 }
 
-.white {
+.white-text {
     color: #FFFFFF;
     background-color: #83B3D3;
 }
+
 
 .houses-image {
     grid-column: 2 / 4;
@@ -200,6 +263,7 @@ body {
 }
 
 .advantages-title {
+    font-family: "PT Sans", sans-serif;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
@@ -207,19 +271,58 @@ body {
     text-transform: uppercase;
 }
 
-.advantages-description, .number {
+.white-text .advantages-title {
+    margin: 97px auto 30px auto;
+}
+
+.icons img {
+    display: block;
+    margin: 89px auto 23px auto;
+}
+
+.number {
     font-size: 18px;
     line-height: 21px;
     font-weight: 400;
     text-align: center;
     width: 250px;
+    margin: 0 auto;
 }
 
-.white .advantages-description {
+.icons .advantages-title {
+    margin: 0;
+}
+
+.no-icons .advantages-title {
+    margin: 97px auto 30px auto;
+}
+
+.advantages-description {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.white-text .advantages-description {
     width: 220px;
+    margin: 30px auto 87px auto;
+}
+
+.icons .advantages-description {
+    width: 250px;
+    margin: 20px auto 79px auto;
+}
+
+.no-icons .advantages-description {
+    width: 250px;
+    margin: 30px auto 108px auto;
 }
 
 .search-title {
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -237,15 +340,14 @@ body {
     margin-bottom: 56px;
 }
 
-.search .search-button {
-    display: block;
+.search .search-link {
     font-size: 20px;
     line-height: 36px;
-    text-align: center;
-    border-radius: 10px;
     width: 575px;
+    height: 60px;
     padding: 15px 0;
-    margin: 0 313px 93px 312px;
+    margin: 0 auto 93px auto;
+    border-radius: 10px;
 }
 
 .distribution {
@@ -257,6 +359,7 @@ body {
 }
 
 .distribution h3 {
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -278,8 +381,40 @@ body {
 }
 
 .distribution-form {
-    width: 600px;
+    display: flex;
+    height: 60px;
+    width: 800px;
     margin: 0 auto;
+}
+
+.distribution-form input {
+    width: 600px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.distribution-form input:invalid {
+    border: 2px solid #FF5757;
+}
+
+.distribution-form input:hover {
+    background: #E6E6E6;
+}
+
+.distribution-form input:focus {
+    outline: 3px solid #83B3D3;;
+    background: #E6E6E6;
+}
+
+.distribution-form input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    padding: 0 19px 0 22px;
 }
 
 .distribution-button {
@@ -288,11 +423,29 @@ body {
     font-weight: 700;
     text-align: center;
     width: 200px;
-    margin: 0 auto 200px auto;
+    height: 60px;
+    padding: 0;
+    margin: 0;
     color: #FFFFFF;
     background-color: #83B3D3;
-    border: #83B3D3;
+    border: none;
     border-radius: 0 10px 10px 0;
+}
+
+.distribution-button:hover {
+    background: #68A2CA;
+}
+
+.distribution-button:focus {
+    outline: 3px solid #756257;
+}
+
+.distribution-button:active {
+    background: #68A2CA;
+}
+
+.distribution-button:active span {
+    opacity: 0.3;
 }
 
 .page-footer {
@@ -310,18 +463,46 @@ body {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    width: 120px;
+    width: 150px;
+    padding: 0;
     margin: 49px auto 53px auto;
 }
 
+.footer-social-item:last-child {
+    margin-right: 0;
+}
+
 .footer-social-item a {
+    position: relative;
     display: block;
-    min-width: 10px;
-    min-height: 16px;
-    margin-right: 29px;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
     color: #83B3D3;
     background-color: #FFFFFF;
     text-decoration: none;
+}
+.footer-social-item a:focus:not(:active) {
+    outline: 2px solid #68A2CA;
+    border-radius: 30%;
+}
+
+.footer-social-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.footer-social-icon:hover path {
+    fill: #68A2CA;
+}
+
+.footer-social-icon:active {
+    opacity: 0.3;
 }
 
 .footer-contacts-phone {
@@ -335,12 +516,43 @@ body {
     margin: 40px auto 53px auto;
 }
 
+.footer-contacts-phone:hover {
+    color: #756257;
+}
+
+.footer-contacts-phone:focus:not(:active) {
+    color: #756257;
+    /*width: 331px;*/
+    outline: 2px solid #68A2CA;
+    border-radius: 4px;
+}
+
+.footer-contacts-phone:active span {
+    opacity: 0.3;
+}
+
 .htmlacademy-link {
+    display: block;
     width: 115px;
+    height: 34px;
     color: #000000;
     background-color: #FFFFFF;
     text-decoration: none;
-    margin-top: 42px;
+    margin: 42px auto 0 auto;
+}
+
+.htmlacademy-link:focus:not(:active) {
+    outline: 2px solid #68A2CA;
+    border-radius: 4px;
+}
+
+.htmlacademy-logo:hover path {
+    fill: #756257;
+}
+
+.htmlacademy-logo:active path {
+    fill: #756257;
+    opacity: 0.3;
 }
 
 /* Catalog*/
@@ -399,6 +611,7 @@ body {
     background-color: #FFFFFF;
 }
  .option h3 {
+     font-family: "PT Sans", sans-serif;
      font-size: 30px;
      line-height: 39px;
      font-weight: 700;
@@ -445,6 +658,7 @@ body {
  }
 
 .hotel-card-title {
+    font-family: "PT Sans", sans-serif;
     font-size: 24px;
     line-height: 31px;
     font-weight: 700;
@@ -455,7 +669,7 @@ body {
 .hotel-breadcrumbs {
     display: grid;
     grid-template-columns: 134px 1fr;
-    grid-gap: 16px 7px;
+    gap: 16px 7px;
 }
 
 .hotel-type, .hotel-price {
@@ -541,6 +755,7 @@ body {
 }
 
 .distribution-inner h3 {
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -591,7 +806,7 @@ body {
     border: 0;
 }
 
-.download {
+.button-download {
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
