@@ -612,7 +612,7 @@ body {
 
 .breadcrumbs-item {
     min-width: 14px;
-    padding: 0px;
+    padding: 0;
     margin-right: 11px;
 }
 
@@ -655,7 +655,7 @@ body {
      line-height: 39px;
      font-weight: 700;
      text-transform: uppercase;
-     margin: 50px auto 53px 71px;
+     margin: 50px 192px 53px 71px;
  }
  .form-selection {
      display: flex;
@@ -664,12 +664,57 @@ body {
  }
 
  .select-control {
+     display: block;
      width: 287px;
+     height: 48px;
+     border: 2px solid #E6E6E6;
+     border-radius: 4px;
  }
+
+ select.select-control {
+     font-family: inherit;
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 24px;
+     color: #333333;
+     margin-right: 81px;
+ }
+
+select.select-control:hover {
+    outline: 2px solid #83B3D3;
+}
+
+select.select-control:focus:not(:active) {
+    outline: 2px solid #83B3D3;
+}
+
+select.select-control:active {
+    color: #E6E6E6
+}
 
  .button-view {
      width: 48px;
      height: 48px;
+     border: 2px solid #E6E6E6;
+     border-radius: 4px;
+     margin-right: 8px;
+ }
+
+.button-view:hover {
+    outline: 2px solid #83B3D3;
+}
+
+.button-view:focus {
+    outline: 2px solid #83B3D3;
+}
+
+.button-view:active {
+    outline: 2px solid #000000;
+}
+
+.button-view img {
+     display: block;
+     margin: 17px;
  }
 
  .hotels-list {
@@ -691,10 +736,28 @@ body {
 }
 
  .hotel-card-link {
+     display: block;
      text-decoration: none;
      padding: 0;
-     margin: 0 0 16px 0;
+     margin: 0;
  }
+
+ .hotel-card-image {
+     display: block;
+     padding: 0;
+     margin: 0;
+ }
+.hotel-card-image:hover {
+    opacity: 60%
+}
+
+.hotel-card-link:focus {
+    outline: 3px solid #83B3D3;
+}
+
+.hotel-card-image:active {
+    opacity: 30%;
+}
 
 .hotel-card-title {
     font-family: "PT Sans", sans-serif;
@@ -702,7 +765,7 @@ body {
     line-height: 31px;
     font-weight: 700;
     color: #000000;
-    margin: 0 0 16px 0;
+    margin: 16px 0;
 }
 
 .hotel-breadcrumbs {
@@ -864,6 +927,10 @@ body {
     border: none;
 }
 
+.button:active span {
+    opacity: 30%;
+}
+
 .button-reset {
     font-family: inherit;
     font-size: 18px;
@@ -891,6 +958,19 @@ body {
     margin: 0;
 }
 
+.hotel-card-button:focus:not(:active) {
+    outline: 3px #756257 solid;
+    background-color: #68A2CA;
+}
+
+.hotel-card-button:hover {
+    background-color: #68A2CA;
+}
+
+.button-green:focus:not(:active), .button-green:hover {
+    background-color: #6C9E42;
+}
+
 .button-green {
     background-color: #7DB54F;
 }
@@ -901,6 +981,17 @@ body {
     background-color: #756257;
     text-decoration: none;
 }
+
+.button-brown:focus:not(:active) {
+    outline: 3px #83B3D3 solid;
+    background-color: #615048;
+}
+
+.button-brown:hover {
+    background-color: #615048;
+}
+
+
 
 
 
