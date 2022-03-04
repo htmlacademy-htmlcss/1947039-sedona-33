@@ -60,7 +60,7 @@
                         <ul class="breadcrumbs">
                             <li class="breadcrumbs-item">
                                 <a class="breadcrumbs-link " href="index.html">
-                                    <svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg aria-hidden="true" focusable="true" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/>
                                     </svg>
                                     <span class="visually-hidden">Главная</span>
@@ -128,15 +128,21 @@
                         <option value="expensive">Сначала дорогие</option>
                     </select>
                     <a class="button-view" href="#">
-                        <img src="images/catalog/mode-icons/mode-list.svg" alt="Показать плиткой">
+                        <svg aria-hidden="true" focusable="true" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" fill="#000"/>
+                        </svg>
                         <span class="visually-hidden">Показать плиткой</span>
                     </a>
                     <a class="button-view" href="#">
-                        <img src="images/catalog/mode-icons/mode-slideshow.svg" alt="Показать слайдом">
+                        <svg aria-hidden="true" focusable="true" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000"/>
+                        </svg>
                         <span class="visually-hidden">Показать слайдом</span>
                     </a>
                     <a href="#" class="button-view">
-                        <img src="images/catalog/mode-icons/mode-tile.svg" alt="Показать списком">
+                        <svg aria-hidden="true" focusable="true" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" fill="#000"/>
+                        </svg>
                         <span class="visually-hidden">Показать списком</span>
                     </a>
                     </div>
@@ -152,8 +158,29 @@
                             <span class="hotel-price">От 4000</span>
                             <a class="button button-brown" href="#"><span>Подробнее</span></a>
                             <button class="hotel-card-button button"><span>В избранное</span></button>
-                            <span class="visually-hidden">Количество звезд</span>
-                            <img src="images/catalog/stars/for-stars.svg" alt="Четыре звезды">
+                            <ul class="stars-number">
+                                <li class="visually-hidden">Количество звезд</li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                            </ul>
                             <span class="rating">Рейтинг</span>
                         </div>
                     </li>
@@ -167,8 +194,24 @@
                             <span class="hotel-price">От 4000</span>
                             <a class="button button-brown" href="#"><span>Подробнее</span></a>
                             <button class="hotel-card-button button"><span>В избранное</span></button>
-                            <span class="visually-hidden">Количество звезд</span>
-                            <img src="images/catalog/stars/three-stars.svg" alt="Три звезды">
+                            <ul class="stars-number">
+                                <li class="visually-hidden">Количество звезд</li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                            </ul>
                             <span class="rating">Рейтинг</span>
                         </div>
                     </li>
@@ -182,8 +225,19 @@
                             <span class="hotel-price">От 4000</span>
                             <a class="button button-brown" href="#"><span>Подробнее</span></a>
                             <button class="hotel-card-button button button-green"><span>В избранном</span></button>
-                            <span class="visually-hidden">Количество звезд</span>
-                            <img src="images/catalog/stars/two-stars.svg" alt="Две звезды">
+                            <ul class="stars-number">
+                                <li class="visually-hidden">Количество звезд</li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                            </ul>
                             <span class="rating">Рейтинг</span>
                         </div>
                     </li>
@@ -197,15 +251,26 @@
                             <span class="hotel-price">От 4000</span>
                             <a class="button button-brown" href="#"><span>Подробнее</span></a>
                             <button class="hotel-card-button button"><span>В избранное</span></button>
-                            <span class="visually-hidden">Количество звезд</span>
-                            <img src="images/catalog/stars/two-stars.svg" alt="Две звезды">
+                            <ul class="stars-number">
+                                <li class="visually-hidden">Количество звезд</li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                                <li>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
+                                    </svg>
+                                </li>
+                            </ul>
                             <span class="rating">Рейтинг</span>
                         </div>
                     </li>
                 </ul>
                 <button class="button button-download">Загрузить еще</button>
                 <div class="pagination-container">
-                    <ul class="pagination">
+                    <ol class="pagination">
                         <li class="pagination-item">
                             <a class="pagination-link pagination-current"><span>1</span></a>
                         </li>
@@ -224,7 +289,7 @@
                         <li class="pagination-item">
                             <a class="pagination-link" href="#"><span>10</span></a>
                         </li>
-                    </ul>
+                    </ol>
                     <label class="pagination-show"><span>Гостиниц на странице:</span>
                         <select class="pagination-show-more">
                             <option value="1">1</option>
