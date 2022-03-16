@@ -653,10 +653,10 @@ img {
     background-color: rgba(242, 242, 242, 0.8);
     z-index: 2;
 }
-/* Закрытие контейнера*/
-/*.modal-container-close {*/
-/*    display: none;*/
-/*}*/
+ /*Закрытие контейнера*/
+.modal-container-close {
+    display: none;
+}
 
 .modal-search {
     position: relative;
