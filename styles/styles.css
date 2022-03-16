@@ -654,23 +654,23 @@ img {
     z-index: 2;
 }
 /* Закрытие контейнера*/
-.modal-container-close {
-    display: none;
-}
+/*.modal-container-close {*/
+/*    display: none;*/
+/*}*/
 
 .modal-search {
     position: relative;
-    padding: 62px 70px 70px;
+    padding: 57px 68px 70px 67px;
     margin: auto;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 30px;
-    width: 575px;
+    width: 577px;
 }
 
 .modal-close-button {
     position: absolute;
-    top: 54px;
-    right: 70px;
+    top: 50px;
+    right: 69px;
     width: 53px;
     height: 53px;
     padding: 0;
@@ -708,7 +708,7 @@ img {
     text-align: start;
     *vertical-align: top;
     padding: 0 0 27px 0;
-    margin: 0 0 32px 0;
+    margin: 0 0 29px;
 }
 
 .field-group {
@@ -851,8 +851,8 @@ img {
 
 .tooltip-text {
     position: absolute;
-    left: 353px;
-    top: 420px;
+    left: 350px;
+    top: 412px;
     font-size: 16px;
     line-height: 20px;
     font-weight: normal;
@@ -1687,7 +1687,7 @@ input[type="number"] {
     border-radius: 10px;
     width: 575px;
     height: 60px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .modal-search-button:hover {
