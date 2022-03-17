@@ -1066,7 +1066,6 @@ input[type="number"] {
     display: block;
     position: absolute;
     top: 5px;
-    bottom: 5px;
     left: 4px;
     min-width: 10px;
     min-height: 5px;
@@ -1475,7 +1474,20 @@ input[type="number"] {
 
 .pagination-current {
     color: #000000;
-    background-color: #F2F2F2;;
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.pagination-current:hover {
+    background-color: #E6E6E6;
+}
+
+.pagination-current:active span {
+    opacity: 0.3;
+}
+
+.pagination-current:focus {
+    outline: 3px solid #68A2CA;
 }
 
 .pagination-show {
