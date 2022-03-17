@@ -140,6 +140,15 @@ img {
     fill: #756257;
 }
 
+.navigation-user-link:focus:not(:active) {
+    outline: none;
+}
+
+.navigation-user-link:focus:not(:active) .navigation-icon {
+    outline: 2px solid #83B3D3;
+    border-radius: 2px;
+}
+
 .navigation-icon:active {
     opacity: 0.3;
 }
@@ -182,7 +191,7 @@ img {
 }
 
 .search-button:focus:not(:active) {
-    outline: 3px solid #83B3D3;;
+    outline: 3px solid #83B3D3;
     background: #615048;
 }
 
@@ -950,7 +959,7 @@ input[type="number"] {
     background-repeat: no-repeat;
     background-size: cover;
     width: 1200px;
-    height: 408px;
+    min-height: 408px;
     padding: 0;
     margin: 0 auto;
 }
@@ -1066,7 +1075,6 @@ input[type="number"] {
     display: block;
     position: absolute;
     top: 5px;
-    bottom: 5px;
     left: 4px;
     min-width: 10px;
     min-height: 5px;
@@ -1166,11 +1174,12 @@ input[type="number"] {
     font-family: inherit;
     font-size: 18px;
     line-height: 23px;
-    width: 20px;
+    max-width: 30px;
     color: #FFFFFF;
     opacity: 30%;
     padding: 12px 14px;
     margin: 0;
+    overflow: auto;
 }
 
 .range-scale {
@@ -1222,7 +1231,7 @@ input[type="number"] {
     display: flex;
     justify-content: space-around;
     width: 1200px;
-    padding: 42px 0 0;
+    padding: 46px 0 0;
     margin: 0;
     color: #000000;
     background-color: #FFFFFF;
@@ -1233,7 +1242,7 @@ input[type="number"] {
     line-height: 39px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 6px 180px 53px 71px;
+    margin: 2px 180px 53px 71px;
     width: 350px;
 }
 
@@ -1249,7 +1258,7 @@ input[type="number"] {
 .select-control {
     display: block;
     width: 287px;
-    min-height: 44px;
+    height: 44px;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
     margin-bottom: 8px;
@@ -1260,7 +1269,7 @@ input[type="number"] {
     color: #333333;
     margin-right: 81px;
     cursor: pointer;
-    padding: 11px 0 13px 17px;
+    padding: 8px 0 13px 16px;
     background-color: #FFFFFF;
 }
 
@@ -1290,8 +1299,8 @@ input[type="number"] {
 
 .button-view {
     position: relative;
-    min-width: 44px;
-    min-height: 44px;
+    width: 44px;
+    height: 44px;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
     margin-right: 7px;
@@ -1315,7 +1324,7 @@ input[type="number"] {
     display: block;
     left: 14px;
     right: 17px;
-    top: 17px;
+    top: 13px;
 }
 
 .hotels-list {
@@ -1475,7 +1484,21 @@ input[type="number"] {
 
 .pagination-current {
     color: #000000;
-    background-color: #F2F2F2;;
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.pagination-current:hover {
+    background-color: #E6E6E6;
+}
+
+.pagination-current:focus:not(:active) {
+    background-color: #E6E6E6;
+    outline: 3px solid #68A2CA;
+}
+
+.pagination-current:active span {
+    opacity: 0.3;
 }
 
 .pagination-show {
@@ -1533,7 +1556,6 @@ input[type="number"] {
 .pagination-show-more:active {
     opacity: 0.3;
 }
-
 
 .distribution-inner {
     width: 800px;
@@ -1640,7 +1662,6 @@ input[type="number"] {
 }
 
 .hotel-card-button {
-    /*justify-self: end;*/
     width: 141px;
     margin-left: 17px;
 }
